@@ -14,8 +14,8 @@ ICACLS C:\Windows\installer /grant administrator:F >nul
 echo  Successfully Installed !, If the RDP is Dead, Please Rebuild Again! 
 echo IP:
 tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || echo "Unable to get NGROK tunnel, make sure NGROK_AUTH_TOKEN is correct in Settings > Secrets > Repository secret. Maybe your previous VM is still running: https://dashboard.ngrok.com/status/tunnels "
-echo Username: nnchnl
-echo Password: 123
+echo Username: administrator
+echo Password: @nnchnl
 echo .
 echo  RDP By @nnchnl
 echo   Connect to Your RDP !
